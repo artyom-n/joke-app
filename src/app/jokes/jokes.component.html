@@ -1,0 +1,38 @@
+<div class="qa-form">
+  <div class="question">
+    Question
+  </div>
+  <input
+    class="form-control form-control-sm"
+    placeholder="Enter the question"
+    type="text" 
+    [(ngModel)]="newQuestion" 
+  />
+  <div class="answer">
+    Answer
+  </div>
+  <input 
+    class="form-control form-control-sm"
+    placeholder="Enter the punchline"
+    type="text" 
+    [(ngModel)]="newAnswer" 
+  />
+  <br />
+  <button
+    [disabled]="!newQuestion || !newAnswer"
+    type="button"
+    class="btn btn-primary create-btn"
+    (click)="addJoke()"
+  >
+    Create
+  </button>
+</div>
+
+<div class="card-container">
+  <app-joke-card 
+    *ngFor="let joke of jokes; let i= index" 
+    [joke]="joke" 
+    (jokeDeletion)="removeJoke(i)"
+  >
+  </app-joke-card>
+</div>

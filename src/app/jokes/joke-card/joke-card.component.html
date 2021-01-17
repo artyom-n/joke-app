@@ -1,0 +1,31 @@
+<div class="card-container">
+  <div class="card"> 
+    <div class="card-body">
+      <div 
+        class="joke-question">
+          {{ joke.question }}
+      </div>   
+      <div 
+        *ngIf="answerDisabled; 
+        else elseBlock">
+      </div>
+      <ng-template        
+        #elseBlock>
+          {{ joke.answer }}
+      </ng-template>    
+      <div class="buttons">
+        <button       
+        class="btn btn-warning tell-btn"
+        (click)="answerDisabled = !answerDisabled"
+      >
+        Tell me
+      </button>
+      <button 
+        (click)="removeJoke()" 
+        class="btn btn-danger">
+          Delete
+      </button>
+      </div>   
+    </div>
+  </div>
+</div>
