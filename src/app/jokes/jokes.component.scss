@@ -1,5 +1,5 @@
 .qa-form {
-    background-color: burlywood;
+    background-color: #393e46;
     border-radius: 4px;
     padding: 11px 22px
 }
@@ -10,11 +10,14 @@
 }
 
 .question {
-    margin: 5px;
-    font-size: 14px
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #eeeeee
 }
 
 .answer {
-    margin: 5px;
-    font-size: 14px
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #eeeeee
 }
