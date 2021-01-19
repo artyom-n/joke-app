@@ -18,6 +18,8 @@ export class JokesComponent {
 
   addJoke(): void {
     this.jokes.unshift({question: this.newQuestion, answer: this.newAnswer})
+    this.newQuestion = '';
+    this.newAnswer = '';
   }  
 
   removeJoke(index: number): void {
